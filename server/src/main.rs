@@ -3,6 +3,7 @@ extern crate log;
 
 use std::env;
 
+mod routes;
 use actix_cors::Cors;
 use actix_rt;
 use actix_web::{http,middleware::Logger,App,HttpServer};
