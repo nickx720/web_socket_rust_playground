@@ -1,6 +1,6 @@
 
 use chrono::{DateTime,Utc};
-use diesel::{PgConnection,QueryDsl,Queryable, RunQueryDsl};
+use diesel::{PgConnection,QueryDsl,Queryable,Insertable ,RunQueryDsl};
 use serde::{Deserialize, Serialize};
 
 use crate::schema::questions;
@@ -23,3 +23,8 @@ impl Question {
     }
 }
 
+#[derive(Debug,Insertable)]
+#[table_name = "questions"]
+pub struct NewQuestion {
+    pub body: String,
+}
