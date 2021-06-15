@@ -889,6 +889,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "errors"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "derive_more",
+ "diesel",
+ "env_logger 0.5.13",
+ "log",
+ "r2d2",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "fake-simd"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
