@@ -24,8 +24,7 @@ test_prepare:
 
 test:
 	docker-compose -f docker-compose.test.yml exec database_test psql -d my_database_test --c="TRUNCATE questions"  \
-	DATABASE_URL=postgres://root@localhost:5433/my_database_test 	cargo test $(T) -- --nocapture --test-threads=1
+	DATABASE_URL=postgres://root@localhost:5433/my_database_test 	cargo test -- --nocapture --test-threads=1
 
 # Update the phony line
 .PHONY: run_server test test_prepare
-
